@@ -1,4 +1,4 @@
-import { test } from '../utils/e2e.page';
+import { test } from '../utils/e2e.controller';
 
 test.describe('Homepage tests', () => {
   test.beforeEach(async ({ homePage }) => {

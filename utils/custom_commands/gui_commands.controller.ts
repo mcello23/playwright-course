@@ -27,7 +27,7 @@ class homePageCommands {
   }
 
   async verifyHeadingText() {
-    const headingText = await this.page.locator(
+    const headingText = this.page.locator(
       "text='Think different. Make different.'",
     );
     await expect(headingText).toBeVisible();

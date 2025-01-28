@@ -1,4 +1,4 @@
-import { expect, test } from '../utils/e2e.page';
+import { expect, test } from '../utils/e2e.controller';
 
 test.describe('Account logged in validations', () => {
   test.beforeEach(async ({ page }) => {

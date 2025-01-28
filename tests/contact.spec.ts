@@ -1,10 +1,9 @@
 import { faker } from '@faker-js/faker';
-import { test } from '../utils/e2e.page';
+import { test } from '../utils/e2e.controller';
 
 test.describe('Contact', () => {
   test('Fill contact form and verify success message', async ({
     contactPage,
-    page,
   }) => {
     await contactPage.navigateToContactPage();
     await contactPage.fillAndSubmitContactForm(

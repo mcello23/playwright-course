@@ -1,4 +1,5 @@
-import { test } from '../utils/e2e.page';
+import { test } from '../utils/e2e.controller';
+
 test.describe('Cart page test', () => {
   test.beforeEach(async ({ cartPage }) => {
     await cartPage.navigateToUploadPage();

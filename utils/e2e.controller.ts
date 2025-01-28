@@ -1,13 +1,12 @@
 import { test as base, expect } from '@playwright/test';
+import { APIController } from './custom_commands/api_commands.controller';
 import {
   aboutPageCommands,
   blogPageCommands,
   cartPageCommands,
   contactPageCommands,
   homePageCommands,
-} from './custom_commands/gui_commands.page.ts';
-
-const storageStatePath = 'storageState.json';
+} from './custom_commands/gui_commands.controller';
 
 const test = base.extend<{
   homePage: homePageCommands;
@@ -15,6 +14,7 @@ const test = base.extend<{
   cartPage: cartPageCommands;
   blogPage: blogPageCommands;
   contactPage: contactPageCommands;
+  API: APIController;
 }>({
   homePage: async ({ page }, use) => {
     const homePage = new homePageCommands(page);
@@ -35,6 +35,11 @@ const test = base.extend<{
   contactPage: async ({ page }, use) => {
     const contactPage = new contactPageCommands(page);
     await use(contactPage);
+  },
+  API: async ({}, use) => {
+    const API = new APIController();
+    await API.init();
+    await use(API);
   },
 });
 
