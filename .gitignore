@@ -9,3 +9,4 @@ loggedInState.json
 notLoggedInState.json
 /allure-results/
 /allure-report/
+.DS_Store

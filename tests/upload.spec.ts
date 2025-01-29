@@ -23,7 +23,7 @@ test.describe('Cart page test', () => {
     cartPage,
   }) => {
     await cartPage.uploadLargePDF();
-    await page.waitForTimeout(800);
+    await page.waitForTimeout(2000);
     await cartPage.verifySuccessPDFUploadMessage();
   });
 
